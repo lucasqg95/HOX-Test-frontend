@@ -1,0 +1,73 @@
+@import '../../global/global.scss';
+
+.container-products{
+    display: flex;
+    justify-content: center;
+
+    .box-products{
+        position: relative;
+        background: white;
+        max-width: 800px;
+        width: 100%;
+        
+        border-radius: 10px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        margin: 5% auto;
+        
+        .content-products{
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .page-products{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    
+                    background-color: white;
+                    border: 2px solid $tertiary;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: $secondary;
+                    cursor: pointer;
+                    transition: background 0.5s;
+                    transition: color 0.8s;
+        
+                    &:hover{
+                        color: #fff;
+                        background: $tertiary;
+                    }
+                }
+
+                .important-button{
+                    @extend button;
+                    color: #fff;
+                    background: $tertiary;
+
+                    &:hover{
+                        color: #fff;
+                        background: rgb(4, 44, 46);
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-create-product{
+        position: fixed;
+        z-index: 1000;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.2);;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

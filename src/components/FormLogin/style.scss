@@ -1,0 +1,76 @@
+@import '../../global/global.scss';
+
+.form-container{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        color: $tertiary;
+    }
+
+    .form-input-block{
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .input-email{
+            padding-left: 5px;
+            height: 32px;
+            border-radius: 4px;
+            border-color: $secondary;
+            width: 100%;
+            color: $primary;
+
+            background: white url(../../assets/loginIcons/user.svg) left no-repeat;
+            background-position-x: 4px;
+            background-size: 20px;
+            padding-left: 28px;
+
+            &::placeholder{
+                opacity: 1;
+                color: $secondary
+            }
+        }
+
+        .input-password{
+            @extend .input-email;
+            background: white url(../../assets/loginIcons/lock.svg) left no-repeat;
+            background-position-x: 4px;
+            background-size: 20px;
+            padding-left: 28px;
+        }
+    }
+
+    span{
+        color: red;
+        padding-bottom: 10px
+    }
+
+    .form-button{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        button{
+            width: 100%;
+            background-color: white;
+            border: 2px solid $tertiary;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $secondary;
+            cursor: pointer;
+            transition: background 0.5s;
+            transition: color 0.8s;
+
+            &:hover{
+                color: #fff;
+                background: $tertiary;
+            }
+        }
+    }
+}

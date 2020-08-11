@@ -1,0 +1,150 @@
+@import '../../global/global.scss';
+
+.box-create-product{
+    
+    background: white;
+    max-width: 400px;
+    width: 100%;
+
+    left: 10px;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+
+    .content-create-product{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        form{
+            margin-top: 20px;
+            width: 100%;
+
+            .form-input-block{
+                margin-bottom: 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+        
+                .form-input{
+                    padding-left: 5px;
+                    height: 32px;
+                    border-radius: 4px;
+                    border-color: $secondary;
+                    width: 100%;
+                    color: $primary;
+        
+                    padding-left: 5px;
+        
+                    &::placeholder{
+                        opacity: 1;
+                        color: $secondary
+                    }
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                label{
+                    padding-left: 8px;
+                    color: $primary;
+                }
+
+                .form-input-checkbox{
+                    height: 30px;
+                    width: 30px;
+                    -webkit-appearance: none;
+                    outline: none;
+                    transition: 0.5s;
+                    margin: 0;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 28px;
+                        height: 28px;
+                        border: 2px solid $secondary;
+                        border-radius: 4px;
+                    }
+
+                    &:hover{
+                        background-color: #ccc;
+                        border-radius: 4px;
+                    }
+
+                    &:checked{
+                        background-color: $secondary;
+                        border-radius: 2px;
+                        transform: scale(1)
+                    }
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 12px;
+                        width: 6px;
+                        height: 13px;
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+
+                    &:disabled{
+                        background: #e6e6e6;
+                        opacity: 0.6;
+                        pointer-events: none;
+                    }
+                }
+
+                input[type=number] {
+                    -moz-appearance: textfield;
+                }
+            }
+
+            .button-create-product{
+
+                display: flex;
+                justify-content: space-between;
+
+                button{
+                    background-color: white;
+                    border: 2px solid $tertiary;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: $secondary;
+                    cursor: pointer;
+                    transition: background 0.5s;
+                    transition: color 0.8s;
+        
+                    &:hover{
+                        color: #fff;
+                        background: $tertiary;
+                    }
+                }
+
+                .important-button{
+                    @extend button;
+                    color: #fff;
+                    background: $tertiary;
+
+                    &:hover{
+                        color: #fff;
+                        background: rgb(4, 44, 46);
+                    }
+                }
+
+            }
+        }
+    }
+}

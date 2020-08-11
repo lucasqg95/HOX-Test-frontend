@@ -1,0 +1,98 @@
+@import '../../global/global.scss';
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width: 100%;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+    thead{
+        tr{
+            background-color: $secondary;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+
+            button{
+                    
+
+                width: 100%;
+                background-color: $secondary;
+                border: 1px solid white;
+                border-radius: 5px;
+                padding: 4px;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+                transition: background 0.5s;
+                transition: color 0.8s;
+
+                &:first-of-type{
+                    margin-right: 5px;
+                }
+                
+                span{
+                    img{
+                        width: 24px;
+                    }
+                }
+            }
+
+            .active{
+                background-color: #fff;
+                border: 1px solid $secondary;
+                color: $secondary;
+            }
+        }
+    }
+
+    tbody{
+        tr{
+            border-bottom: 1px solid #dddddd;
+
+            &:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            &:last-of-type{
+                border-bottom: 2px solid $secondary
+            }
+
+            td{
+                button{
+                    
+                    background-color: white;
+                    border: 1px solid $tertiary;
+                    border-radius: 5px;
+                    padding: 4px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: $secondary;
+                    cursor: pointer;
+                    transition: background 0.5s;
+                    transition: color 0.8s;
+
+                    &:first-of-type{
+                        margin-right: 5px;
+                    }
+                    
+                    span{
+                        img{
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    th, td{
+        padding: 12px 15px;
+    }
+}
