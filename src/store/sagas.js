@@ -59,6 +59,7 @@ function* asyncPutProduct(action) {
     
     yield call(api.put, '/product', data ,{headers:headerParams})
 
+    window.location.reload()
 }
 
 

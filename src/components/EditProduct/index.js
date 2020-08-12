@@ -35,7 +35,7 @@ function EditProducts({ target, token, isEditProduct, editProduct }){
         editProduct(data, token)
         isEditProduct(false)
 
-        window.location.reload()
+        
     }
 
     function HandleCurrency({ value }){
